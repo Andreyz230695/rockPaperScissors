@@ -1,0 +1,73 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:#000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gamearea{
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    min-width: 600px;
+    height:auto;
+    margin:0 auto;
+    margin-top: 100px;
+}
+
+.player,.computer{
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top:0;
+    left:0;
+    margin:0 auto;
+}
+
+#rock,#paper,#scissors,#comp-rock,#comp-paper,#comp-scissors{
+    margin: 10px;
+    background-color: gray;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.active{
+    border: 2px solid black;
+}
+
+.btn{
+    background-color: #F9B94E;
+    color:white;
+    margin-bottom: 1rem;
+    padding: 2rem;
+    border-radius: 20px;
+    cursor:pointer;
+    text-align: center;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.btn:hover{
+    background-color: #E62240;
+    color: #F9B94E;
+}
+
+.img{
+    margin: 0 auto;
+    width: 64px;
+    height: 64px;
+}

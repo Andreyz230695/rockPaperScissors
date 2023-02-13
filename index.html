@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="gamearea">
+        <h1>Rock Paper & Scissors</h1>
+        <div class = "player">
+            <div id="comp-rock" class="">
+                <img class="img" src="./images/rock-on-svgrepo-com.svg">
+            </div>
+            <div id="comp-paper" class="">
+                <img class="img" src="./images/paper-text-svgrepo-com.svg">
+            </div> 
+            <div id="comp-scissors" class="">
+                <img class="img" src="./images/pruners-scissors-svgrepo-com.svg">
+            </div>
+        </div>
+        <p id="CompWhat">Computer yet to chose</p>
+        <br>
+        <div class="score">
+            <h4>Score</h4>
+            <p>Computer:<span id="comp-score">0</span></p>
+            <p>You:<span id="player-score">0</span></p>
+            
+        </div>  
+
+        <div class = "player">
+            <div id="rock" class="">
+                <img class="img" src="./images/rock-on-svgrepo-com.svg">
+            </div>
+            <div id="paper" class="">
+                <img class="img" src="./images/paper-text-svgrepo-com.svg">
+            </div> 
+            <div id="scissors" class="">
+                <img class="img" src="./images/pruners-scissors-svgrepo-com.svg">
+            </div>
+        </div>
+        <p id="PlayerWhat">Player yet to chose</p>
+        <br>
+        <h3 class="result" id="result">Let the game begin</h3>
+        <br>
+        <button class="btn" id="playBtn">PLAY!</button>
+        <button class="btn" id="restart">Restart</button>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>
