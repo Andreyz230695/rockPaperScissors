@@ -47,6 +47,9 @@ body{
 
 .active{
     border: 2px solid black;
+    box-shadow: 5px 10px 5px;
+    transition: box-shadow 0.2s ease;
+    border-radius: 20px;
 }
 
 .btn{

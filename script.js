@@ -11,10 +11,10 @@ const playBtn = document.getElementById('playBtn')
 const restart = document.getElementById('restart')
 const whatCompChoice = document.getElementById('CompWhat')
 const whatPlayerChoice = document.getElementById('PlayerWhat')
-let playerChoice = ''
+let playerChoice 
 let playerScore = 0 
 let computerScore = 0
-let computerChoice = 'rock' 
+let computerChoice 
 let computerCalculateChoice = 1;
 
 
@@ -24,27 +24,25 @@ let computerCalculateChoice = 1;
 
 function getComputerChoice(){
     computerCalculateChoice = Math.floor(Math.random(1)*4)
-
-    if(playerChoice == ""){
-        resultArea.innerHTML = "Player must Chose"
+    console.log(computerCalculateChoice )
+        if(playerChoice == undefined){
+            resultArea.innerHTML = "Player must Chose"
     }
-    
-    else if(computerCalculateChoice == 1){
-        computerChoice ="rock"
-        compMakeActive(compRock)
-        whatCompChoice.innerText = 'Computer chose rock!'
-    }
-    else if(computerCalculateChoice == 2){
-        computerChoice ="paper"
-        compMakeActive(compPaper)
-        whatCompChoice.innerText = 'Computer chose paper!'
-    }
-    else if(computerCalculateChoice == 3){
-        computerChoice = "scissors"
-        compMakeActive(compScissors)
-        whatCompChoice.innerText = 'Computer chose scissors!'
-    }
-    console.log(computerChoice)
+        else if(computerCalculateChoice == 1){
+            computerChoice ="rock"
+            compMakeActive(compRock)
+            whatCompChoice.innerText = 'Computer chose rock!'
+         }
+        else if(computerCalculateChoice == 2){
+            computerChoice ="paper"
+            compMakeActive(compPaper)
+            whatCompChoice.innerText = 'Computer chose paper!'
+         }
+        else if(computerCalculateChoice == 3){
+            computerChoice = "scissors"
+            compMakeActive(compScissors)
+            whatCompChoice.innerText = 'Computer chose scissors!'
+          }
 }
 
 //Get PlayerChoice
@@ -75,7 +73,11 @@ function getPlayerChoice(){
 
 //Compare Choices
 function compareChoices(){
-    if(playerChoice == computerChoice){
+    if(playerChoice == undefined){
+        resultArea.innerHTML = "Player must Chose"
+    }
+
+    else if(playerChoice === computerChoice){
         resultArea.innerText = "Tie"
     }
     else if ((playerChoice == 'rock' && computerChoice == 'scissors') || (playerChoice == 'paper' && computerChoice == 'rock') || (playerChoice == 'scissors' && computerChoice == 'paper')){
@@ -104,8 +106,8 @@ function compareChoices(){
 
 //PLAY
 function play(){
-    getComputerChoice();
     getPlayerChoice();
+    getComputerChoice();
     compareChoices();
 }
 
